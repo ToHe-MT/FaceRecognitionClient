@@ -1,3 +1,7 @@
+
+This repository contains the Client-Side for my Face Recognition Project. The corresponding Server or API can be found in this [repository](https://github.com/ToHe-MT/FaceRecognitionAPI).
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
