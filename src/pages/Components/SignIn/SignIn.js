@@ -29,7 +29,7 @@ const SignIn = ({ onRouteChange, loadUser }) => {
             setLoading(false);
             return;
         }
-        fetch('http://localhost:3000/signin',
+        fetch('https://face-recognition-api-nine.vercel.app/signin',
             {
                 method: 'post',
                 headers: { 'Content-Type': "application/json" },
