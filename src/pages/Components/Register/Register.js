@@ -34,9 +34,7 @@ const Register = ({ onRouteChange }) => {
             {
                 method: 'post',
                 headers: { 'Content-Type': "application/json" },
-                body: JSON.stringify(
-                    formData
-                )
+                body: JSON.stringify(formData)
             })
             .then(res => res.json())
             .then(user => {
@@ -48,7 +46,7 @@ const Register = ({ onRouteChange }) => {
                     setError("PLease Enter Valid Email, Name, and, Password")
                 }
             })
-            .catch(err=>console.log("Failed Fetch"))
+            .catch(err=>console.log("Failed Fetch", err))
     }
 
     return (
