@@ -20,8 +20,8 @@ const Register = ({ onRouteChange }) => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const passwordRegex = /^.{1,}$/;
     const onSubmitRegister = (e) => {
-        e.preventDefault();
         setLoading(true)
+        e.preventDefault();
 
         const isEmailValid = emailRegex.test(formData.email);
         const isPasswordValid = passwordRegex.test(formData.password);
@@ -43,7 +43,7 @@ const Register = ({ onRouteChange }) => {
                     setLoading(false)
                 } else {
                     setLoading(false)
-                    setError("PLease Enter Valid Email, Name, and, Password")
+                    setError("Please Enter Valid Email, Name, and, Password")
                 }
             })
             .catch(err=>console.log("Failed Fetch", err))
@@ -73,7 +73,11 @@ const Register = ({ onRouteChange }) => {
                         <span></span>
                         <div></div>
                         {error && <div>{error}</div>}
+                        {loading?
+                        <button className="mt-3 w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white" >Loading ... </button>
+                        :
                         <button onClick={onSubmitRegister} type="submit" className="mt-3 w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white" >Sign Up</button>
+                    }
                     </form>
                     <p className="text-sm font-light">
                         Already have an account? <a href="#" className="font-medium text-blue-600 hover:underline" onClick={() => onRouteChange('signin')}>Sign In</a>
