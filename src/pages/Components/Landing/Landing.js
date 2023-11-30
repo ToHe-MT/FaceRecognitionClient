@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Tilt from 'react-parallax-tilt';
 
 const Landing = ({ user, updateEntries }) => {
-
+    const { name, id, entries } = user || {};
     const [imageURL, setImageURL] = useState('')
     const [input, setInput] = useState('')
     const [boxes, setBoxes] = useState([])
@@ -48,7 +48,7 @@ const Landing = ({ user, updateEntries }) => {
                             method: 'post',
                             headers: { 'Content-Type': "application/json" },
                             body: JSON.stringify({
-                                id: user.id
+                                id: id
                             })
                         })
                         .then(res => res.json())
@@ -68,7 +68,7 @@ const Landing = ({ user, updateEntries }) => {
     return (
         <div>
             <Logo />
-            <Rank userName={user.name} entries={user.entries} />
+            <Rank userName={name} entries={entries} />
             <ImageLinkForm onInputChange={onInputChange} onButtonClick={onButtonClick} imageURL={imageURL} boxes={boxes} />
         </div>
     )
