@@ -61,7 +61,7 @@ class Home extends Component {
     return (
       <div className="font-mono relative h-screen w-full">
         <MovingBG />
-        <Navigation onRouteChange={this.onRouteChange} isSignedIn={this.state.isSignedIn} emptyUser={this.emptyUser} route={this.route} />
+        <Navigation onRouteChange={this.onRouteChange} isSignedIn={this.state.isSignedIn} emptyUser={this.emptyUser} route={this.state.route} />
         {this.state.route === "signin" ?
           <SignIn onRouteChange={this.onRouteChange} loadUser={this.loadUser} />
           :
