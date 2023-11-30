@@ -67,17 +67,6 @@ const SignIn = ({ onRouteChange, loadUser }) => {
                             <input onChange={onInputChange} type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 w-full p-2.5 block" required="" />
                         </div>
                         {error && <div className="text-xs text-red-400">Incorrect Username and Password Combination !</div>}
-                        <div className="flex items-center justify-between">
-                            <div className="flex items-start">
-                                <div className="flex items-center h-5">
-                                    <input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300" required="" />
-                                </div>
-                                <div className="ml-3 text-sm">
-                                    <label className="">Remember me</label>
-                                </div>
-                            </div>
-                            <a href="#" className="text-sm font-medium hover:underline text-blue-600">Forgot password?</a>
-                        </div>
                         {loading ?
                             <button className="w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
                                 Loading . . .
