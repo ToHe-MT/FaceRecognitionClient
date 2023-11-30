@@ -68,7 +68,7 @@ const Landing = ({ user, updateEntries }) => {
     return (
         <div>
             <Logo />
-            <Rank name={user.name} entries={user.entries} />
+            <Rank userName={user.name} entries={user.entries} />
             <ImageLinkForm onInputChange={onInputChange} onButtonClick={onButtonClick} imageURL={imageURL} boxes={boxes} />
         </div>
     )
@@ -84,11 +84,11 @@ const Logo = () => {
         </Tilt>
     )
 }
-const Rank = ({ name, entries }) => {
+const Rank = ({ userName, entries }) => {
     return (
         <>
             <div className="text-center">
-                {`Hi ${name}, Your current Entry Count is `}
+                {`Hi ${userName}, Your current Entry Count is `}
             </div>
             <div className="text-center text-2xl mb-4">
                 {`${entries}`}
