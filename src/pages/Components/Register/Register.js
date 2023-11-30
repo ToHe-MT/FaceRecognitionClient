@@ -30,7 +30,7 @@ const Register = ({ onRouteChange }) => {
             setLoading(false);
             return;
         }
-        fetch('https://face-recognition-api-nine.vercel.app/register',
+        fetch(`${process.env.SERVER}/register`,
             {
                 method: 'post',
                 headers: { 'Content-Type': "application/json" },

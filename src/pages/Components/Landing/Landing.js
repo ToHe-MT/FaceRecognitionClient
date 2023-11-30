@@ -33,7 +33,7 @@ const Landing = ({ user, updateEntries }) => {
 
     const onButtonClick = () => {
         setImageURL(input)
-        fetch('https://face-recognition-api-nine.vercel.app/imageurl', {
+        fetch(`${process.env.SERVER}/imageurl`, {
             method: 'post',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify({
@@ -43,7 +43,7 @@ const Landing = ({ user, updateEntries }) => {
             .then(response => response.json())
             .then(response => {
                 if (response) {
-                    fetch('https://face-recognition-api-nine.vercel.app/image',
+                    fetch(`${process.env.SERVER}/image`,
                         {
                             method: 'post',
                             headers: { 'Content-Type': "application/json" },
