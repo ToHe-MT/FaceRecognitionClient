@@ -74,7 +74,7 @@ const Register = ({ onRouteChange }) => {
                         <div></div>
                         {error && <div>{error}</div>}
                         {loading?
-                        <button className="mt-3 w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white" >Loading ... </button>
+                        <p className="mt-3 w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white" >Loading ... </p>
                         :
                         <button onClick={onSubmitRegister} type="submit" className="mt-3 w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white" >Sign Up</button>
                     }

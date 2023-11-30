@@ -68,9 +68,9 @@ const SignIn = ({ onRouteChange, loadUser }) => {
                         </div>
                         {error && <div className="text-xs text-red-400">Incorrect Username and Password Combination !</div>}
                         {loading ?
-                            <button className="w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
+                            <p className="w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
                                 Loading . . .
-                            </button>
+                            </p>
                             :
                             <button onClick={onSubmitSignIn} type="submit" className="w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
                                 Sign In
