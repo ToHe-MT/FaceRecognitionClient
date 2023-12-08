@@ -46,7 +46,7 @@ const Register = ({ onRouteChange }) => {
                     setError("Please Enter Valid Email, Name, and, Password")
                 }
             })
-            .catch(err=>console.log("Failed Fetch", err))
+            .catch(err => console.log("Failed Fetch", err))
     }
 
     return (
@@ -73,20 +73,23 @@ const Register = ({ onRouteChange }) => {
                         <span></span>
                         <div></div>
                         {error && <div>{error}</div>}
-                        {loading?
-                        <p className="mt-3 w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white" >Loading ... </p>
-                        :
-                        <button onClick={onSubmitRegister} type="submit" className="mt-3 w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white" >Sign Up</button>
-                    }
+                        {loading ?
+                            <p className="mt-3 w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white" >Loading ... </p>
+                            :
+                            <button onClick={onSubmitRegister} type="submit" className="mt-3 w-full bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white" >Sign Up</button>
+                        }
                     </form>
                     <p className="text-sm font-light">
                         Already have an account? <a href="#" className="font-medium text-blue-600 hover:underline" onClick={() => onRouteChange('signin')}>Sign In</a>
                     </p>
-                    <p className="text-sm font-light text-slate-300 ">
-                            Eventhought Password have been crypted and stored
-                            <br/>
-                            I suggest do not use your everyday email and password
-                        </p>
+                    <p className="text-sm font-light text-slate-100 ">
+                        Even though passwords have been encrypted
+                        <br />
+                        <span className="text-red-400">
+
+                            Do not use your everyday email and password!
+                        </span>
+                    </p>
                 </div>
             </div>
         </div>
