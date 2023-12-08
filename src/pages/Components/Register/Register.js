@@ -82,7 +82,7 @@ const Register = ({ onRouteChange }) => {
                     <p className="text-sm font-light">
                         Already have an account? <a href="#" className="font-medium text-blue-600 hover:underline" onClick={() => onRouteChange('signin')}>Sign In</a>
                     </p>
-                    <p className="text-sm font-light text-slate-100 ">
+                    <p className="text-sm font-light text-stone-600 ">
                         Even though passwords have been encrypted
                         <br />
                         <span className="text-red-400">
