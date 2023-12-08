@@ -82,6 +82,11 @@ const Register = ({ onRouteChange }) => {
                     <p className="text-sm font-light">
                         Already have an account? <a href="#" className="font-medium text-blue-600 hover:underline" onClick={() => onRouteChange('signin')}>Sign In</a>
                     </p>
+                    <p className="text-sm font-light text-slate-300 ">
+                            Eventhought Password have been crypted and stored
+                            <br/>
+                            I suggest do not use your everyday email and password
+                        </p>
                 </div>
             </div>
         </div>

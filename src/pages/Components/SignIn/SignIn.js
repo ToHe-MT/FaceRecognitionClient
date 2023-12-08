@@ -80,6 +80,13 @@ const SignIn = ({ onRouteChange, loadUser }) => {
                         <p className="text-sm font-light">
                             Don’t have an account yet? <a href="#" className="font-medium text-blue-600 hover:underline" onClick={() => onRouteChange('register')}>Sign up</a>
                         </p>
+                        <p className="text-sm font-light text-slate-300 ">
+                            Test account
+                            <br/>
+                            Email: test@gmail.com
+                            <br/>
+                            Password: test
+                        </p>
                     </form>
                 </div>
             </div>
